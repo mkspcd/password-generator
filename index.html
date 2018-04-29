@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div id="page" class="flex-container wrap">
+
+    <div class="flex-side">
+      <div class="center-content">
+        <h1>Password Generator</h1>
+      </div>
+
+      <div class="center-content form">
+        <form id="form">
+          <label class="container">Numbers
+            <input type="checkbox" id="numbers" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label class="tip">Contains numbers : 1 2 ... 9 0</label>
+
+          <label class="container">Uppercase letters
+            <input type="checkbox" id="uppercases" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label class="tip">Contains uppercase letters : A B ... Y Z</label>
+
+          <label class="container">Lowercase letters
+            <input type="checkbox" id="lowercases" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label class="tip">Contains lowercase letters : a b ... y z</label>
+
+          <label class="container">Symbols
+            <input type="checkbox" id="symbols" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <label class="tip">Contains symbols : ! ? # $ % & * + - =</label>
+
+          <label class="container">Remove similar characters
+            <input type="checkbox" id="similars">
+            <span class="checkmark"></span>
+          </label>
+          <label class="tip">No ambiguous characters : 1 l I ! 0 O Q 8 B</label>
+
+          <div>
+            <button type="submit" id="submit-btn" class="btn submit-btn">Generate</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+    <div class="flex-side result">
+
+      <div class="center-results">
+        <div class="flex-container password-result">
+          <input type="text" name="password-1" value="U#nx9p8rcZ58">
+          <button type="submit" class="btn copy-btn no-wrap">Copy</button>
+        </div>
+
+        <div class="flex-container password-result">
+          <input type="text" name="password-2" value="3cxC5VcR54?v">
+          <button type="submit" class="btn copy-btn no-wrap">Copy</button>
+        </div>
+
+        <div class="flex-container password-result">
+          <input type="text" name="password-3" value="$vmL33a9m3=z2">
+          <button type="submit" class="btn copy-btn no-wrap">Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/password-generator.js"></script>
+</body>
+
+</html>

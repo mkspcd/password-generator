@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|IBM+Plex+Mono');
+* {
+  margin: 0;
+  color: #787a91;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  font-size: 100%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-side {
+  background-color: #f4f5fa;
+  padding: 20px;
+  flex: 1;
+  min-height: 100vh;
+}
+
+.flex-side:nth-child(2) {
+  background-color: #fdffff;
+  flex: 1;
+}
+
+@media screen and (max-width:990px) {
+  .container {
+    flex-wrap: wrap;
+    height: auto;
+    display: table;
+  }
+  .flex-side:first-child {
+    flex-basis: 100%;
+    min-height: auto;
+  }
+  .flex-side.result {
+    min-height: auto;
+  }
+  .center-results {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+.center-content {
+  width: 500px;
+  margin: 70px auto;
+}
+
+.center-content h1 {
+  color: #2c509e;
+  font-size: 5em;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+
+/* Customize the label (the container) */
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  height: 18px;
+  width: 18px;
+  background-color: #ddd;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input~.checkmark {
+  background-color: #aaa;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.tip {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #787a9194;
+  font-size: 0.8em;
+  padding-left: 35px;
+}
+
+.btn {
+  text-transform: uppercase;
+  background-color: #2196F3;
+  color: #fdffff;
+  border: 1px solid #2196F3;
+}
+
+.submit-btn {
+  font-size: 1.1em;
+  margin-top: 40px;
+  margin-right: 50px;
+  padding: 10px 25px;
+  border-radius: 2px;
+  float: right;
+}
+
+.submit-btn.inactive {
+  background-color: #ddd;
+  border: 1px solid #ddd;
+}
+
+.copy-btn {
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  padding: 8px 20px 7px 20px;
+  margin-left: -3px;
+  font-size: 0.9em;
+}
+
+.password-result {
+  margin: 50px auto;
+  width: auto;
+}
+
+.password-result>input[type=text] {
+  background-color: #fdffff;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 1.1em;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.1em;
+}
+
+.center-results {
+  width: 50%;
+  margin: 50% 25%;
+}
