@@ -1,9 +1,13 @@
 # Password Generator
 
-**[Work in progress]**
-A simple password generator written in JavaScript.
-I finished the html/css part, and need to finish the password generation implementation.
-
+**[Work in progress]**  
+A simple password generator written in JavaScript.  
+I finished the HTML/css part, and need to finish the password generation implementation.  
+  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mkspcd/password-generator/master/screenshot.png" alt="Password Generator" />
+</p>
+  
 ## Why ?
 Because.
 
