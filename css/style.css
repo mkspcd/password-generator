@@ -148,6 +148,8 @@
   background-color: #2196F3;
   color: #fdffff;
   border: 1px solid #2196F3;
+  outline: 0;
+  transition: all 0.3s ease 0s;
 }
 
 .submit-btn {
@@ -157,6 +159,15 @@
   padding: 10px 25px;
   border-radius: 2px;
   float: right;
+}
+
+.submit-btn:hover {
+  background: #1aaa55;
+  border: 1px solid #1aaa55;
+}
+
+.submit-btn:active {
+  background: #168f48;
 }
 
 .submit-btn.inactive {
