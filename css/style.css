@@ -145,11 +145,11 @@
 
 .btn {
   text-transform: uppercase;
-  background-color: #2196F3;
   color: #fdffff;
+  background-color: #2196F3;
   border: 1px solid #2196F3;
   outline: 0;
-  transition: all 0.3s ease 0s;
+  transition: all 0.2s ease 0s;
   cursor: pointer;
 }
 
@@ -169,6 +169,8 @@
 
 .submit-btn:active {
   background: #168f48;
+  border: 1px solid #168f48;
+  padding: 12px 25px 8px;
 }
 
 .submit-btn.inactive {
@@ -177,26 +179,53 @@
 }
 
 .copy-btn {
-  background-color: #ddd;
-  border: 1px solid #ddd;
   padding: 8px 20px 7px 20px;
   margin-left: -3px;
   font-size: 0.9em;
 }
 
+.copy-btn:hover {
+  background: #1aaa55;
+  border: 1px solid #1aaa55;
+}
+
+.copy-btn:active {
+  background: #168f48;
+  border: 1px solid #168f48;
+  padding: 10px 20px 5px 20px;
+}
+
+.copy-btn:inactive {
+  background-color: #ddd;
+  border: 1px solid #ddd;
+}
+
 .password-result {
-  margin: 50px auto;
+  margin: 55px auto;
   width: auto;
 }
 
 .password-result>input[type=text] {
   background-color: #fdffff;
   border: 1px solid #ddd;
+  outline: 0;
   padding: 5px 10px;
   text-align: center;
   font-size: 1.1em;
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 0.1em;
+}
+
+.password-result>input[type=text]::selection {
+  background: transparent;
+}
+
+.password-result>input[type=text]::-moz-selection {
+  background: transparent;
+}
+
+.password-result>input[type=text]:focus {
+  background: #eee;
 }
 
 .center-results {

@@ -53,9 +53,6 @@ document.getElementById('similars').addEventListener('change', function () {
 
 document.getElementById('submit-btn').addEventListener('click', generatesRandomPasswords);
 
-
-
-
 function generatesRandomPasswords() {
   const randomPasswords = [];
   for (let i = 0; i < NUMBER_OF_PASSWORD_TO_GENERATE; i++) {
@@ -92,4 +89,9 @@ function showResults(randomPasswords) {
   document.getElementById('password-1').value = randomPasswords[0];
   document.getElementById('password-2').value = randomPasswords[1];
   document.getElementById('password-3').value = randomPasswords[2];
+}
+
+function copyPassword(password) {
+  document.getElementById(password).select();
+  document.execCommand('Copy');
 }

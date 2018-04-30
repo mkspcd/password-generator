@@ -49,28 +49,27 @@
           <button id="submit-btn" class="btn submit-btn">Generate</button>
         </div>
       </div>
-
     </div>
 
     <div class="flex-side result">
-
       <div class="center-results">
         <div class="flex-container password-result">
-          <input type="text" id="password-1" name="password-1">
-          <button type="submit" class="btn copy-btn no-wrap">Copy</button>
+          <input type="text" id="password-1" name="password-1" spellcheck="false">
+          <button class="btn copy-btn no-wrap" onclick="copyPassword('password-1')">Copy</button>
         </div>
 
         <div class="flex-container password-result">
-          <input type="text" id="password-2" name="password-2">
-          <button type="submit" class="btn copy-btn no-wrap">Copy</button>
+          <input type="text" id="password-2" name="password-2" spellcheck="false">
+          <button class="btn copy-btn no-wrap" onclick="copyPassword('password-2')">Copy</button>
         </div>
 
         <div class="flex-container password-result">
-          <input type="text" id="password-3" name="password-3">
-          <button type="submit" class="btn copy-btn no-wrap">Copy</button>
+          <input type="text" id="password-3" name="password-3" spellcheck="false">
+          <button class="btn copy-btn no-wrap" onclick="copyPassword('password-3')">Copy</button>
         </div>
       </div>
     </div>
+
   </div>
 
   <script src="js/password-generator.js"></script>
