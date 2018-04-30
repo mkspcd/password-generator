@@ -17,6 +17,7 @@ const upperCasesNoSimilar = 'ACDEFGHJKLMNPRSTUVWXYZ';
 const lowerCasesNoSimilar = 'abcdefghijkmnopqrstuvwxyz';
 const symbolsNoSimilar = '?#$%&*+-=';
 
+const NUMBER_OF_PASSWORD_TO_GENERATE = 3;
 const passwordLength = 12;
 let charPool = numbers + upperCases + lowerCases + symbols;
 
@@ -50,7 +51,18 @@ document.getElementById('similars').addEventListener('change', function () {
   updateSubmitButton();
 });
 
-document.getElementById('form').addEventListener('submit', generate());
+document.getElementById('submit-btn').addEventListener('click', generatesRandomPasswords);
+
+
+
+
+function generatesRandomPasswords() {
+  const randomPasswords = [];
+  for (let i = 0; i < NUMBER_OF_PASSWORD_TO_GENERATE; i++) {
+    randomPasswords.push(Array(passwordLength).fill(charPool).map(x => { return x[Math.floor(Math.random() * x.length)] }).join(''));
+  }
+  showResults(randomPasswords);
+};
 
 function updateCharPool() {
   charPool = '';
@@ -67,10 +79,17 @@ function updateCharPool() {
   }
 }
 
+// Desactivate the generate button if the charPool is empty
 function updateSubmitButton() {
   if (options.numbers === false && options.uppercases === false && options.lowercases === false && options.symbols === false) {
     document.getElementById('submit-btn').classList.add('inactive');
   } else {
     document.getElementById('submit-btn').classList.remove('inactive');
   }
+}
+
+function showResults(randomPasswords) {
+  document.getElementById('password-1').value = randomPasswords[0];
+  document.getElementById('password-2').value = randomPasswords[1];
+  document.getElementById('password-3').value = randomPasswords[2];
 }
