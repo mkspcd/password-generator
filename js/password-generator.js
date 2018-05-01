@@ -19,6 +19,7 @@ const symbolsNoSimilar = '?#$%&*+-=';
 
 const NUMBER_OF_PASSWORDS_TO_GENERATE = 3;
 const PASSWORD_LENGTH = 12;
+
 let charPool = numbers + upperCases + lowerCases + symbols;
 
 document.getElementById('numbers').addEventListener('change', function () {
