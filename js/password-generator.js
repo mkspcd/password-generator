@@ -56,7 +56,12 @@ document.getElementById('submit-btn').addEventListener('click', generatesRandomP
 function generatesRandomPasswords() {
   const randomPasswords = [];
   for (let i = 0; i < NUMBER_OF_PASSWORD_TO_GENERATE; i++) {
-    randomPasswords.push(Array(passwordLength).fill(charPool).map(x => { return x[Math.floor(Math.random() * x.length)] }).join(''));
+    randomPasswords
+      .push(Array(passwordLength)
+        .fill(charPool)
+        .map(x => { return x[Math.floor(Math.random() * x.length)] })
+        .join('')
+      );
   }
   showResults(randomPasswords);
 };
