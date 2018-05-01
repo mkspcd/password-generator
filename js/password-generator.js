@@ -59,9 +59,7 @@ function generatesRandomPasswords() {
     randomPasswords
       .push(Array(passwordLength)
         .fill(charPool)
-        .map(x => {
-          return x[Math.floor(Math.random() * x.length)];
-        })
+        .map(x => { return x[Math.floor(Math.random() * x.length)] })
         .join('')
       );
   }
