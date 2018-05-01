@@ -17,8 +17,8 @@ const upperCasesNoSimilar = 'ACDEFGHJKLMNPRSTUVWXYZ';
 const lowerCasesNoSimilar = 'abcdefghijkmnopqrstuvwxyz';
 const symbolsNoSimilar = '?#$%&*+-=';
 
-const NUMBER_OF_PASSWORD_TO_GENERATE = 3;
-const passwordLength = 12;
+const NUMBER_OF_PASSWORDS_TO_GENERATE = 3;
+const PASSWORD_LENGTH = 12;
 let charPool = numbers + upperCases + lowerCases + symbols;
 
 document.getElementById('numbers').addEventListener('change', function () {
@@ -55,9 +55,9 @@ document.getElementById('submit-btn').addEventListener('click', generatesRandomP
 
 function generatesRandomPasswords() {
   const randomPasswords = [];
-  for (let i = 0; i < NUMBER_OF_PASSWORD_TO_GENERATE; i++) {
+  for (let i = 0; i < NUMBER_OF_PASSWORDS_TO_GENERATE; i++) {
     randomPasswords
-      .push(Array(passwordLength)
+      .push(Array(PASSWORD_LENGTH)
         .fill(charPool)
         .map(x => { return x[Math.floor(Math.random() * x.length)] })
         .join('')
