@@ -84,7 +84,12 @@ function updateCharPool() {
 
 // Desactivate the generate button if the charPool is empty
 function updateSubmitButton() {
-  if (options.numbers === false && options.uppercases === false && options.lowercases === false && options.symbols === false) {
+  if (
+    options.numbers === false
+    && options.uppercases === false
+    && options.lowercases === false
+    && options.symbols === false
+  ) {
     document.getElementById('submit-btn').classList.add('inactive');
   } else {
     document.getElementById('submit-btn').classList.remove('inactive');
