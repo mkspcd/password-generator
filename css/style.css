@@ -195,11 +195,6 @@
   padding: 10px 20px 5px 20px;
 }
 
-.copy-btn:inactive {
-  background-color: #ddd;
-  border: 1px solid #ddd;
-}
-
 .password-result {
   margin: 55px auto;
   width: auto;
