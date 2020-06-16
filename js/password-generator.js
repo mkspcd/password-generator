@@ -54,13 +54,23 @@ document.getElementById('similars').addEventListener('change', function () {
 
 document.getElementById('submit-btn').addEventListener('click', generatesRandomPasswords)
 
+function secureUniformGenerator(length) {
+    const crypto = window.crypto || window.msCrypto;
+    let min = (-length >>> 0) % length;
+    let randNum = new Uint32Array(1);
+    do {
+        x = crypto.getRandomValues(randNum);
+    } while (x < min)
+    return x % length;
+}
+
 function generatesRandomPasswords() {
   const randomPasswords = []
   for (let i = 0; i < NUMBER_OF_PASSWORDS_TO_GENERATE; i++) {
     randomPasswords
       .push(Array(PASSWORD_LENGTH)
         .fill(charPool)
-        .map(x => x[Math.floor(Math.random() * x.length)])
+        .map(x => x[secureUniformGenerator(x.length)])
         .join('')
       )
   }
